@@ -1,0 +1,26 @@
+profiles 多环境配置梳理：
+1.数据源配置
+    1.1 url根据自身情况修改为 localhost 或者为 内网ip（集群或者分布式系统一定使用内网ip）
+    1.2 root改为自己密码
+
+2.mybatis日志打印
+    dev 环境可以打印
+    test 环境可以打印
+    prod 无需打印
+
+3.图片保存目录 和 图片服务请求路径配置
+
+4.从支付中心回调后端服务的回调地址
+
+打包方式：
+1.jar
+    服务化的概念，后续接触spring cloud，所有服务打包都是以jar形式存在
+
+2.war
+    应用程序的概念，也可以向外提供服务和接口
+    2.1 打包形式为war
+    2.2 剔除自身的tomcat
+    2.3 添加servlet-api依赖
+    2.4 添加War包启动类，指向springboot启动类
+    2.5 编译
+    2.6 上传war包到tomcat的webapps

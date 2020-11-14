@@ -1,0 +1,21 @@
+package com.imooc;
+
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+/**
+ * @author Jarvis(Tang Hui)
+ * @version 1.0
+ * @date 2020/4/19 20:15
+ */
+
+//4.打包war，添加war包启动类
+
+public class WarStarterApplication extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        // 指向Application这个springboot启动类
+        return builder.sources(Application.class);
+    }
+}
